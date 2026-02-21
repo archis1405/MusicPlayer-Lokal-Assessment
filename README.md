@@ -15,11 +15,11 @@ cd <project-name>
 
 npm install
 
-npx expo start
+eas login
 
-npx expo run:android   --> for running on android device
+eas build --platform android --profile preview   --> for running on android device
 
-npx expo run:ios   --> for running on android device
+Now Scan the QR and download the apk and you are good to use it 
 
 ```
 
