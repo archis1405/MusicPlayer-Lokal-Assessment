@@ -49,8 +49,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "82bf1ea0-4428-4b6c-90ef-3e3c16853df6"
+        "projectId": "99070fa2-ed82-4b8c-8d2a-7d067f34edca"
       }
-    }
+    },
+    "owner": "archisman.d"
   }
 }

@@ -163,7 +163,7 @@ export const PlayerScreen: React.FC = () => {
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       <StatusBar barStyle="light-content" />
 
-      {/* Header */}
+      
       <View style={styles.header}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -187,7 +187,7 @@ export const PlayerScreen: React.FC = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Artwork */}
+     
       <View style={styles.artworkContainer}>
         <Image
           source={{ uri: imageUrl }}
@@ -196,7 +196,7 @@ export const PlayerScreen: React.FC = () => {
         />
       </View>
 
-      {/* Song Info */}
+      
       <View style={styles.songInfo}>
         <View style={styles.songInfoText}>
           <Text style={styles.songName} numberOfLines={1}>
@@ -215,7 +215,7 @@ export const PlayerScreen: React.FC = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Seek Bar */}
+      
       <View style={styles.seekContainer}>
         <SeekBar
           position={position}
@@ -228,7 +228,6 @@ export const PlayerScreen: React.FC = () => {
         </View>
       </View>
 
-      {/* Controls */}
       <View style={styles.controls}>
         <TouchableOpacity onPress={toggleShuffle} style={styles.sideControl}>
           <Feather
@@ -265,7 +264,6 @@ export const PlayerScreen: React.FC = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Extra Actions */}
       <View style={styles.extraActions}>
         <TouchableOpacity onPress={handleDownload} style={styles.extraBtn}>
           <Feather

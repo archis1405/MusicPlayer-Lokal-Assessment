@@ -85,6 +85,7 @@ export type RootStackParamList = {
   MainTabs: undefined;
   Player: undefined;
   Queue: undefined;
+  Search: undefined;
   ArtistDetail: { artistId: string };
   AlbumDetail: { albumId: string };
 };
@@ -93,4 +94,7 @@ export type BottomTabParamList = {
   Home: undefined;
   Search: undefined;
   Library: undefined;
+  Favourites: undefined;
+  Playlists: undefined;
+  Settings: undefined;
 };

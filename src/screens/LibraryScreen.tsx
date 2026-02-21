@@ -29,7 +29,7 @@ export const LibraryScreen: React.FC = () => {
         <Text style={styles.title}>Your Library</Text>
       </View>
 
-      {/* Tabs */}
+      
       <View style={styles.tabs}>
         <TouchableOpacity
           style={[styles.tab, activeTab === 'liked' && styles.activeTab]}

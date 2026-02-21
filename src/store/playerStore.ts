@@ -89,7 +89,7 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
     storage.set(StorageKeys.CURRENT_SONG_INDEX, index.toString());
 
     try {
-      // Check if downloaded version exists
+     
       const downloaded = getDownloadedSong(song.id);
       const songToPlay = downloaded
         ? { ...song, downloadUrl: [{ quality: '320kbps', url: downloaded.localAudioPath }] }
@@ -134,8 +134,9 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
       if (nextIndex >= queue.length) {
         if (repeatMode === 'all') {
           nextIndex = 0;
-        } else {
-          return; // End of queue
+        } 
+        else {
+          return;
         }
       }
     }
@@ -196,12 +197,9 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
 
   addToQueue: (song) => {
     const { queue } = get();
-    const exists = queue.find((s) => s.id === song.id);
-    if (!exists) {
-      const newQueue = [...queue, song];
-      set({ queue: newQueue });
-      storage.set(StorageKeys.QUEUE, JSON.stringify(newQueue));
-    }
+    const newQueue = [...queue, song];
+    set({ queue: newQueue });
+    storage.set(StorageKeys.QUEUE, JSON.stringify(newQueue));
   },
 
   removeFromQueue: (index) => {
